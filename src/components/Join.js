@@ -52,7 +52,7 @@ function Join() {
           contentEditable
           id="password"
           name="password"
-          className="editable-div"
+          className="editable-div password"
           onInput={(e) =>
             handleChange({
               target: { name: 'password', value: e.target.innerText },
@@ -66,7 +66,7 @@ function Join() {
           contentEditable
           id="confirmPassword"
           name="confirmPassword"
-          className="editable-div"
+          className="editable-div password"
           onInput={(e) =>
             handleChange({
               target: { name: 'confirmPassword', value: e.target.innerText },
