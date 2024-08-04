@@ -14,7 +14,7 @@ export default function TeleHealth() {
         <img
           src="https://ifh.cc/g/rPpW9z.jpg" // 이미지 URL
           alt="TeleHealth"
-          className="fullscreen-image" // CSS 클래스 추가
+          className="fullscreen-image" // CSS 클래스 추가.
         />
       </a>
     </div>
