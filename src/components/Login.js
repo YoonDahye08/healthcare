@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
   const [username, setUsername] = useState('')
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const handleLogin = () => {
     if (username) {
       localStorage.setItem('loggedInUser', username)
-      history.push('/capital')
+      navigate('/capital')
     } else {
       alert('Please enter your username')
     }
