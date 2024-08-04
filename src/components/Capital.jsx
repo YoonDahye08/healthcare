@@ -343,6 +343,11 @@ function Capital() {
   }
 
   const checkAnswer = () => {
+    if (!userAnswer.trim()) {
+      setResult('답을 입력하세요!')
+      return
+    }
+
     const correctAnswer = questions[currentDifficulty][questionIndex].capital
 
     if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
