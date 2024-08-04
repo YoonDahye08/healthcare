@@ -12,7 +12,7 @@ export default function TeleHealth() {
       {/* 이미지 클릭 시 linkURL로 이동 */}
       <a href={linkURL} target="_blank" rel="noopener noreferrer">
         <img
-          src="https://ifh.cc/g/rPpW9z.jpg" // 이미지 URL
+          src="https://ifh.cc/g/vwqXzx.jpg" // 이미지 URL
           alt="TeleHealth"
           className="fullscreen-image" // CSS 클래스 추가.
         />
