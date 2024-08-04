@@ -23,7 +23,7 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            사용자명:
+            이메일 :
             <input
               type="text"
               name="username"
@@ -34,7 +34,7 @@ const Login = () => {
         </div>
         <div>
           <label>
-            비밀번호:
+            비밀번호 :
             <input
               type="password"
               name="password"

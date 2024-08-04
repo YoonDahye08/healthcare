@@ -33,7 +33,7 @@ function Join() {
     <div className="container">
       <h2>회원가입</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">이메일:</label>
+        <label htmlFor="email">이메일 :</label>
         <div
           contentEditable
           id="email"
@@ -47,7 +47,7 @@ function Join() {
           suppressContentEditableWarning={true}
         ></div>
 
-        <label htmlFor="password">비밀번호:</label>
+        <label htmlFor="password">비밀번호 :</label>
         <div
           contentEditable
           id="password"
@@ -61,7 +61,7 @@ function Join() {
           suppressContentEditableWarning={true}
         ></div>
 
-        <label htmlFor="confirmPassword">비밀번호 확인:</label>
+        <label htmlFor="confirmPassword">비밀번호 확인 :</label>
         <div
           contentEditable
           id="confirmPassword"
