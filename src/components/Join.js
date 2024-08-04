@@ -3,7 +3,6 @@ import './Join.css' // 스타일 파일 경로
 
 function Join() {
   const [formData, setFormData] = useState({
-    username: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -34,45 +33,47 @@ function Join() {
     <div className="container">
       <h2>회원가입</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">아이디:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-          required
-        />
-
         <label htmlFor="email">이메일:</label>
-        <input
-          type="email"
+        <div
+          contentEditable
           id="email"
           name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+          className="editable-div"
+          onInput={(e) =>
+            handleChange({
+              target: { name: 'email', value: e.target.innerText },
+            })
+          }
+          suppressContentEditableWarning={true}
+        ></div>
 
         <label htmlFor="password">비밀번호:</label>
-        <input
-          type="password"
+        <div
+          contentEditable
           id="password"
           name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
+          className="editable-div"
+          onInput={(e) =>
+            handleChange({
+              target: { name: 'password', value: e.target.innerText },
+            })
+          }
+          suppressContentEditableWarning={true}
+        ></div>
 
         <label htmlFor="confirmPassword">비밀번호 확인:</label>
-        <input
-          type="password"
+        <div
+          contentEditable
           id="confirmPassword"
           name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          required
-        />
+          className="editable-div"
+          onInput={(e) =>
+            handleChange({
+              target: { name: 'confirmPassword', value: e.target.innerText },
+            })
+          }
+          suppressContentEditableWarning={true}
+        ></div>
 
         <button type="submit">가입하기</button>
       </form>

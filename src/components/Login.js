@@ -1,29 +1,50 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 
-function Login() {
-  const [username, setUsername] = useState('')
-  const history = useHistory()
+const Login = () => {
+  const [credentials, setCredentials] = useState({ username: '', password: '' })
 
-  const handleLogin = () => {
-    if (username) {
-      localStorage.setItem('loggedInUser', username)
-      history.push('/capital')
-    } else {
-      alert('Please enter your username')
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setCredentials({
+      ...credentials,
+      [name]: value,
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // 여기에서 로그인 로직을 구현하세요
+    console.log('Login Submitted', credentials)
   }
 
   return (
     <div>
-      <h1>Login</h1>
-      <input
-        type="text"
-        placeholder="Enter your username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
+      <h2>로그인</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>
+            사용자명:
+            <input
+              type="text"
+              name="username"
+              value={credentials.username}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            비밀번호:
+            <input
+              type="password"
+              name="password"
+              value={credentials.password}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <button type="submit">로그인</button>
+      </form>
     </div>
   )
 }
