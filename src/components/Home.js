@@ -1,9 +1,9 @@
 import React from "react";
-import dementia1 from "../img/대한민국 치매현황2023_65세이상 추정치매환자 및 중증도별 현황_중앙치매센터.png"
-import dementia2 from "../img/대한민국 치매현황2023_연도별 추정치매환자수 및 유병률_중앙치매센터.png"
+import dementia1 from "../img/dementia3.png"
+import dementia2 from "../img/dementia4.png"
 import dementia_img1 from "../img/dementia1.jpg"
 import dementia_img2 from "../img/dementia2.jpg"
-import prevention_img from "../img/치매예방수칙333.jpg"
+import prevention_img from "../img/dementia333.jpg"
 import "./Home.css"
 
 export default function Home() {
