@@ -12,12 +12,6 @@ const Login = () => {
     })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // 여기에서 로그인 로직 구현
-    console.log('Login Submitted', credentials)
-  }
-
   return (
     <div className="login-container">
       <h2>로그인</h2>

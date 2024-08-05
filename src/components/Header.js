@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 
 export default function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
     <div className="header">
       <h2>
@@ -26,12 +32,22 @@ export default function Header() {
         <li>
           <Link to="/News">뉴스</Link>
         </li>
-        <li>
-          <Link to="/Login">로그인</Link>
-        </li>
-        <li>
-          <Link to="/Join">회원가입</Link>
-        </li>
+        {isLoggedIn ? (
+          <>
+            <li>
+              <button onClick={handleLogout}>로그아웃</button>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link to="/Login">로그인</Link>
+            </li>
+            <li>
+              <Link to="/Join">회원가입</Link>
+            </li>
+          </>
+        )}
       </ul>
     </div>
   )

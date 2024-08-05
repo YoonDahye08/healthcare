@@ -1,12 +1,35 @@
-import React from "react";
+
 import dementia1 from "../img/dementia3.png"
 import dementia2 from "../img/dementia4.png"
 import dementia_img1 from "../img/dementia1.jpg"
 import dementia_img2 from "../img/dementia2.jpg"
 import prevention_img from "../img/dementia333.jpg"
 import "./Home.css"
+import axios from 'axios'
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://zz.msporthome.store/server/loginCheck');
+        setUserData(response.data);
+
+        alert(userData.login_state);
+
+      } catch (error) {
+
+        alert(error);
+
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return <div className="home">
     <div className="main">
       <h1>고령화사회의 적, 치매</h1>
