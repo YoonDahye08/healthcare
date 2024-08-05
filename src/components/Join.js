@@ -8,6 +8,7 @@ function Join() {
     confirmPassword: '',
   })
 
+  const [showPassword, setShowPassword] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
 
   const handleChange = (e) => {
@@ -29,10 +30,18 @@ function Join() {
     }
   }
 
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword)
+  }
+
   return (
     <div className="container">
       <h2>회원가입</h2>
-      <form method="POST" action="https://zz.msporthome.store/server/signup">
+      <form
+        onSubmit={handleSubmit}
+        method="POST"
+        action="https://zz.msporthome.store/server/signup"
+      >
         <label htmlFor="email">이메일 : </label>
         <input
           type="email"
@@ -45,7 +54,7 @@ function Join() {
 
         <label htmlFor="password">비밀번호 : </label>
         <input
-          type="password"
+          type={showPassword ? 'text' : 'password'}
           id="password"
           name="PW"
           value={formData.password}
@@ -55,13 +64,17 @@ function Join() {
 
         <label htmlFor="confirmPassword">비밀번호 확인 : </label>
         <input
-          type="password"
+          type={showPassword ? 'text' : 'password'}
           id="confirmPassword"
           name="confirmPassword"
           value={formData.confirmPassword}
           onChange={handleChange}
           required
         />
+
+        <button type="button" onClick={toggleShowPassword}>
+          {showPassword ? '비밀번호 숨기기' : '비밀번호 보이기'}
+        </button>
 
         <button type="submit">가입하기</button>
       </form>
