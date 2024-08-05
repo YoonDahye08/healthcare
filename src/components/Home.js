@@ -4,6 +4,7 @@ import dementia2 from "../img/대한민국 치매현황2023_연도별 추정치�
 import dementia_img1 from "../img/dementia1.jpg"
 import dementia_img2 from "../img/dementia2.jpg"
 import prevention_img from "../img/치매예방수칙333.jpg"
+import "./Home.css"
 
 export default function Home() {
   return <div className="home">
@@ -19,7 +20,7 @@ export default function Home() {
       <div className="dementia">
         <img src={dementia2} alt="연도별 추정치매환자수 및 유병률"/>
         <span>전국 60세 이상 추정치매환자지수는 2018년 약 77만명, 2019년 약 82만명, 2020년 약 86만명, 2021년 약 91만명, 2022년 약 96만명으로 매년 약 5만명씩 증가하는 추세
-        <br /><br />
+          <br />
         전국 65세 이상 추정치매환자지수는 2018년 약 75만명, 2019년 약 79만명, 2020년 약 84만명, 2021년 약 89만명, 2022년 약 94만명으로 매년 약 5만명씩 증가하는 추세</span>
       </div>
     </div>
@@ -78,7 +79,7 @@ export default function Home() {
 
     <div className="prevention">
       <span className="prevention333">치매 예방 수칙 333</span><br />
-      <img src={prevention_img} alt="치매 예방 수칙 333" className="prevention_img" />
+      <img src={prevention_img} alt="치매 예방 수칙 333" className="prevention_img"/>
     </div>
   </div>;
 }
