@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Login.css"
 
 const Login = () => {
-  const [credentials, setCredentials] = useState({ username: '', password: '' })
+  const [credentials, setCredentials] = useState({ Email: '', PW: '' })
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -21,14 +21,14 @@ const Login = () => {
   return (
     <div>
       <h2>로그인</h2>
-      <form onSubmit={handleSubmit}>
+      <form method="POST" action="https://zz.msporthome.store/server/login">
         <div>
           <label>
             이메일 :
             <input
               type="text"
-              name="username"
-              value={credentials.username}
+              name="Email"
+              value={credentials.Email}
               onChange={handleChange}
             />
           </label>
@@ -38,8 +38,8 @@ const Login = () => {
             비밀번호 :
             <input
               type="password"
-              name="password"
-              value={credentials.password}
+              name="PW"
+              value={credentials.PW}
               onChange={handleChange}
             />
           </label>
