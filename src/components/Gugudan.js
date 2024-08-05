@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Gugudan.css'
 
 const Gugudan = () => {
   const [problem, setProblem] = useState({ multiplicand: 0, multiplier: 0 })
