@@ -32,11 +32,7 @@ function Join() {
   return (
     <div className="container">
       <h2>회원가입</h2>
-      <form
-        onSubmit={handleSubmit}
-        method="POST"
-        action="https://zz.msporthome.store/server/signup"
-      >
+      <form method="POST" action="https://zz.msporthome.store/server/signup">
         <label htmlFor="email">이메일 :</label>
         <input
           type="email"

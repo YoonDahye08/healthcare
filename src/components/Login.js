@@ -20,11 +20,7 @@ const Login = () => {
   return (
     <div>
       <h2>로그인</h2>
-      <form
-        onSubmit={handleSubmit}
-        method="POST"
-        action="https://zz.msporthome.store/server/login"
-      >
+      <form method="POST" action="https://zz.msporthome.store/server/login">
         <div>
           <label>
             이메일 :
