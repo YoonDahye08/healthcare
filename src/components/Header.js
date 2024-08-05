@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React from 'react' // 'React' must be in scope when using JSX  react/react-in-jsx-scope
-import './Header.css'
-=======
 import React from 'react'
-import "./Header.css"
->>>>>>> eb392ce00f623787636ef4029b1076a818c94529
+import './Header.css'
 
 export default function Header() {
   return (
@@ -14,15 +9,9 @@ export default function Header() {
         <Link to="/">HealthCare</Link>
       </h2>
       <ul>
-<<<<<<< HEAD
         <li className="game">
-          치매예방게임
-          <ul className="subgame">
-=======
-        <li className='game'>
           치매 예방 게임
-          <ul className='subgame'>
->>>>>>> eb392ce00f623787636ef4029b1076a818c94529
+          <ul className="subgame">
             <li>
               <Link to="/Gugudan">구구단</Link>
             </li>

@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-<<<<<<< HEAD
 import './Login.css'
-=======
-import "./Login.css"
->>>>>>> eb392ce00f623787636ef4029b1076a818c94529
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ Email: '', PW: '' })
