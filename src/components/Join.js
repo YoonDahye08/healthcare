@@ -35,8 +35,8 @@ function Join() {
       <form method="POST" action="https://zz.msporthome.store/server/signup">
         <label htmlFor="email">이메일 :</label>
         <input
-          type="email"
-          id="email"
+          type="text"
+          id="text"
           name="Email"
           value={formData.email}
           onChange={handleChange}
