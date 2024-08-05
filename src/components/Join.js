@@ -43,7 +43,7 @@ function Join() {
           <input
             type="email"
             id="email"
-            name="email"
+            name="Email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -53,7 +53,7 @@ function Join() {
           <input
             type={showPassword ? 'text' : 'password'}
             id="password"
-            name="password"
+            name="PW"
             value={formData.password}
             onChange={handleChange}
             required
