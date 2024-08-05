@@ -25,19 +25,23 @@ function Join() {
     } else {
       setErrorMessage('')
       alert('회원가입이 완료되었습니다.')
-      // 여기서 실제 서버 데이터 보내는 로직 구현
+      // 여기에서 로그인 로직 구현
     }
   }
 
   return (
     <div className="container">
       <h2>회원가입</h2>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        method="POST"
+        action="https://zz.msporthome.store/server/signup"
+      >
         <label htmlFor="email">이메일 :</label>
         <input
           type="email"
           id="email"
-          name="email"
+          name="Email"
           value={formData.email}
           onChange={handleChange}
           required
@@ -47,7 +51,7 @@ function Join() {
         <input
           type="password"
           id="password"
-          name="password"
+          name="PW"
           value={formData.password}
           onChange={handleChange}
           required
