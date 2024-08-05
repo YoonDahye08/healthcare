@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Login.css'
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ Email: '', PW: '' })
@@ -18,32 +19,30 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <div className="login-container">
       <h2>로그인</h2>
       <form method="POST" action="https://zz.msporthome.store/server/login">
-        <div>
-          <label>
-            이메일 :
-            <input
-              type="text"
-              name="Email"
-              value={credentials.Email}
-              onChange={handleChange}
-            />
-          </label>
+        <div className="form-group">
+          <label>이메일 : </label>
+          <input
+            type="text"
+            name="Email"
+            value={credentials.Email}
+            onChange={handleChange}
+          />
         </div>
-        <div>
-          <label>
-            비밀번호 :
-            <input
-              type="password"
-              name="PW"
-              value={credentials.PW}
-              onChange={handleChange}
-            />
-          </label>
+        <div className="form-group">
+          <label>비밀번호 : </label>
+          <input
+            type="password"
+            name="PW"
+            value={credentials.PW}
+            onChange={handleChange}
+          />
         </div>
-        <button type="submit">로그인</button>
+        <button type="submit" className="submit-btn">
+          로그인
+        </button>
       </form>
     </div>
   )

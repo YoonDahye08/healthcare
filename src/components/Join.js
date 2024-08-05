@@ -35,50 +35,48 @@ function Join() {
   }
 
   return (
-    <div className="container">
-      <h2>회원가입</h2>
-      <form
-        onSubmit={handleSubmit}
-        method="POST"
-        action="https://zz.msporthome.store/server/signup"
-      >
-        <label htmlFor="email">이메일 : </label>
-        <input
-          type="email"
-          id="email"
-          name="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+    <div>
+      <div className="container">
+        <h2>회원가입</h2>
+        <form method="POST" action="https://zz.msporthome.store/server/signup">
+          <label htmlFor="email">이메일 : </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="password">비밀번호 : </label>
-        <input
-          type={showPassword ? 'text' : 'password'}
-          id="password"
-          name="PW"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="password">비밀번호 : </label>
+          <input
+            type={showPassword ? 'text' : 'password'}
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="confirmPassword">비밀번호 확인 : </label>
-        <input
-          type={showPassword ? 'text' : 'password'}
-          id="confirmPassword"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="confirmPassword">비밀번호 확인 : </label>
+          <input
+            type={showPassword ? 'text' : 'password'}
+            id="confirmPassword"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            required
+          />
 
-        <button type="button" onClick={toggleShowPassword}>
-          {showPassword ? '비밀번호 숨기기' : '비밀번호 보이기'}
-        </button>
+          <button type="button" onClick={toggleShowPassword}>
+            {showPassword ? '비밀번호 숨기기' : '비밀번호 보이기'}
+          </button>
 
-        <button type="submit">가입하기</button>
-      </form>
-      {errorMessage && <p id="error-message">{errorMessage}</p>}
+          <button type="submit">가입하기</button>
+        </form>
+        {errorMessage && <p id="error-message">{errorMessage}</p>}
+      </div>
     </div>
   )
 }
