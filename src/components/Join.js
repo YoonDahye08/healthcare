@@ -33,17 +33,17 @@ function Join() {
     <div className="container">
       <h2>회원가입</h2>
       <form method="POST" action="https://zz.msporthome.store/server/signup">
-        <label htmlFor="email">이메일 :</label>
+        <label htmlFor="email">이메일 : </label>
         <input
-          type="text"
-          id="text"
+          type="email"
+          id="email"
           name="Email"
           value={formData.email}
           onChange={handleChange}
           required
         />
 
-        <label htmlFor="password">비밀번호 :</label>
+        <label htmlFor="password">비밀번호 : </label>
         <input
           type="password"
           id="password"
@@ -53,7 +53,7 @@ function Join() {
           required
         />
 
-        <label htmlFor="confirmPassword">비밀번호 확인 :</label>
+        <label htmlFor="confirmPassword">비밀번호 확인 : </label>
         <input
           type="password"
           id="confirmPassword"
