@@ -3,8 +3,8 @@ import './Join.css' // 스타일 파일 경로
 
 function Join() {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    Email: '',
+    PW: '',
     confirmPassword: '',
   })
 
@@ -21,7 +21,7 @@ function Join() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (formData.password !== formData.confirmPassword) {
+    if (formData.PW !== formData.confirmPassword) {
       setErrorMessage('비밀번호가 일치하지 않습니다.')
     } else {
       setErrorMessage('')
@@ -38,13 +38,17 @@ function Join() {
     <div>
       <div className="container">
         <h2>회원가입</h2>
-        <form method="POST" action="https://zz.msporthome.store/server/signup">
+        <form
+          method="POST"
+          action="https://zz.msporthome.store/server/signup"
+          //onSubmit={handleSubmit}
+        >
           <label htmlFor="email">이메일 : </label>
           <input
             type="email"
             id="email"
-            name="email"
-            value={formData.email}
+            name="Email"
+            value={formData.Email}
             onChange={handleChange}
             required
           />
@@ -53,8 +57,8 @@ function Join() {
           <input
             type={showPassword ? 'text' : 'password'}
             id="password"
-            name="password"
-            value={formData.password}
+            name="PW"
+            value={formData.PW}
             onChange={handleChange}
             required
           />

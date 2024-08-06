@@ -1,13 +1,23 @@
-import { Link } from 'react-router-dom'
-import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
 
 export default function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const userObj = JSON.parse(window.sessionStorage.getItem('login_state'))
+    if (userObj && userObj.login_state === 'login') {
+      setIsLoggedIn(true)
+    }
+  }, [])
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
+    window.sessionStorage.removeItem('login_state')
+    setIsLoggedIn(false)
+    navigate('/')
+  }
 
   return (
     <div className="header">
@@ -33,11 +43,9 @@ export default function Header() {
           <Link to="/News">뉴스</Link>
         </li>
         {isLoggedIn ? (
-          <>
-            <li>
-              <button onClick={handleLogout}>로그아웃</button>
-            </li>
-          </>
+          <li>
+            <button onClick={handleLogout}>로그아웃</button>
+          </li>
         ) : (
           <>
             <li>
