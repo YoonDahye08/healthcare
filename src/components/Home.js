@@ -10,10 +10,10 @@ export default function Home() {
     <div className="home">
       <div>
         <Link to="/Gugudan">
-          <img src={game_img1} alt="게임 바로가기" className="game_img1" />
+          <img src={game_img1} alt="게임 바로가기 1" className="game_img1" />
         </Link>
         <Link to="Capital">
-          <img src={game_img2} alt="게임 바로가기2" className="game_img2" />
+          <img src={game_img2} alt="게임 바로가기 2" className="game_img2" />
         </Link>
       </div>
 
