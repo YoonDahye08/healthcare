@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import './Header.css'
@@ -19,18 +18,6 @@ export default function Header() {
     setIsLoggedIn(false)
     navigate('/')
   }
-=======
-import { Link } from 'react-router-dom'
-import React, { useState } from 'react'
-import './Header.css'
-
-export default function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
->>>>>>> bad7814735df9eaccb6558027ce5839b744fc05e
 
   return (
     <div className="header">
@@ -56,17 +43,9 @@ export default function Header() {
           <Link to="/News">뉴스</Link>
         </li>
         {isLoggedIn ? (
-<<<<<<< HEAD
           <li>
             <button onClick={handleLogout}>로그아웃</button>
           </li>
-=======
-          <>
-            <li>
-              <button onClick={handleLogout}>로그아웃</button>
-            </li>
-          </>
->>>>>>> bad7814735df9eaccb6558027ce5839b744fc05e
         ) : (
           <>
             <li>
