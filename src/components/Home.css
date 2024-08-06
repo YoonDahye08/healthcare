@@ -27,30 +27,55 @@
   margin-top: 150px;
 }
 
-.older p:not(.older_2023 p, .older_p p){
+.older p:not(.older_1 p, .older_2 p, .older_3 p, .older_4 p){
   font-size: 30px;
   font: bold;
 }
 
-.older_2023, .older_p{
-  border: 1px solid black;
+.older_1, .older_2, .older_3, .older_4 {
   display: inline-block;
   width: 600px;
   border-radius: 5px;
   padding: 10px;
+  margin: 10px;
 }
 
-.older_2023{
+.older_1, .older_3{
   position: relative;
-  height: 105px;
+  background-color: rgba(197,240,164, 0.5) ;
+  border: 1px solid #C5F0A4;
 }
 
-.older_p{
+.older_2, .older_4{
   position: absolute;
   right: 100px;
-
+  border: 1px solid #35B0AB;
+  background-color: rgba(53,176,171, 0.5);
 }
 
-.older_2023 p:first-child, .older_p p:first-child{
+.older_1 p:first-child, .older_2 p:first-child, .older_3 p:first-child, .older_4 p:first-child{
   font-size: 20px;
+}
+
+.copy {
+  font-size: 10px;
+  text-align: center;
+  margin-left: 70px;
+}
+
+.today{
+  margin-top: 150px;
+}
+
+.today p:first-child{
+  font-size: 30px;
+}
+
+.today a{
+  text-decoration-line: none;
+  color: black;
+}
+
+.today a:hover{
+  text-decoration-line: underline;
 }

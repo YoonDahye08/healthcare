@@ -22,20 +22,34 @@ export default function Home() {
         <a href={gameLink1}><img src={game_img1} alt="게임 바로가기" className="game_img1"/></a>
         <a href={gameLink2}><img src={game_img2} alt="게임 바로가기2" className="game_img2"/></a>
       </div>
-      
+
       <div className='older'>
-        <p>전국 60세 이상</p>
-        <div className='older_2023'>
-          <p>2023년 노인인구</p>
-          <p>13,652,453명</p>
+        <p>2022년 전국 65세 이상</p>
+        <div className='older_1'>
+          <p>노인인구</p>
+          <p>9,010,544명 (17.6%)</p>
         </div>
-        <div className='older_p'>
-          <p>전국</p>
-          <p>추정치매환자수 : 1,010,400.2 명</p>
-          <p>추정치매유병률 : 7.40%</p>
+        <div className='older_2'>
+          <p>치매상병자수</p>
+          <p>923,003명 (10.2%)</p>
+        </div>
+        <div className='older_3'>
+          <p>추정치매환자수</p>
+          <p>935,086.6명</p>
+        </div>
+        <div className='older_4'>
+          <p>치매환자 1인당 연간 관리비용 (추정)</p>
+          <p>2,220만원</p>
+        </div>
+        <div className='copy'>
+          - Copyright (c) 중앙치매센터 -
         </div>
       </div>
-      
+
+      <div className='today'>
+        <p>치매환자유병현황 확인</p>
+        <a href='https://www.nid.or.kr/info/today_list_2023.aspx' target='_blank'>치매오늘은</a>
+      </div>
     </div>
   )
 }
