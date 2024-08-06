@@ -25,7 +25,6 @@ export default function Home() {
         </a>
       </div>
 
-<<<<<<< HEAD
       <div className='older'>
         <p>2022년 전국 65세 이상</p>
         <div className='older_1'>
@@ -53,20 +52,6 @@ export default function Home() {
         <p>치매환자유병현황 확인</p>
         <a href='https://www.nid.or.kr/info/today_list_2023.aspx' target='_blank'>치매오늘은</a>
       </div>
-=======
-      <div className="older">
-        <p>전국 60세 이상</p>
-        <div className="older_2023">
-          <p>2023년 노인인구</p>
-          <p>13,652,453명</p>
-        </div>
-        <div className="older_p">
-          <p>전국</p>
-          <p>추정치매환자수 : 1,010,400.2 명</p>
-          <p>추정치매유병률 : 7.40%</p>
-        </div>
-      </div>
->>>>>>> 63134b38b0c60b5b17695375aca2996e641ece03
     </div>
   )
 }
