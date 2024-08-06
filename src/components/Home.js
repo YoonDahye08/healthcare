@@ -5,7 +5,6 @@ import dementia_img1 from '../img/dementia1.jpg'
 import dementia_img2 from '../img/dementia2.jpg'
 import prevention_img from '../img/dementia333.jpg'
 import icon_img1 from '../img/icon_img1.png'
-
 import game_img1 from '../img/game_img1.png'
 import game_img2 from '../img/game_img2.png'
 import './Home.css'
