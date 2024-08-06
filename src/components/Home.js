@@ -10,52 +10,8 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 
 export default function Home() {
-  /*
-  const checkSession = async () => {
-    try {
-      const response = await axios.get(
-        'https://zz.msporthome.store/server/loginCheck'
-      )
-      if (response.data.authenticated) {
-        // 로그인 상태
-        alert(response.data.user)
-        console.log('User:', response.data.user)
-      } else {
-        // 로그아웃 상태
-        alert('')
-        console.log('Not authenticated')
-      }
-    } catch (error) {
-      alert('Error checking session:', error)
-      console.error('Error checking session:', error)
-    }
-  }
-  checkSession() */
-
-  const [userData, setUserData] = useState(null)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          'https://zz.msporthome.store/server/loginCheck'
-        )
-        setUserData(response.data)
-
-        if (response.data) {
-          alert(response.data.login_state)
-        }
-
-        // alert(userData.login_state)
-      } catch (error) {
-        // alert(error)
-
-        console.error(error)
-      }
-    }
-
-    fetchData()
-  }, [])
+  const storage = window.sessionStorage.getItem('userName')
+  //alert(storage)
 
   return (
     <div className="home">
