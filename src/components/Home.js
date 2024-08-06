@@ -1,21 +1,20 @@
 // import React from 'react'
+import {Link} from 'react-router-dom'
 import game_img1 from '../img/game_img1.png'
 import game_img2 from '../img/game_img2.png'
 import './Home.css'
 
 export default function Home() {
-  const gameLink1 = 'Gugudan'
-  const gameLink2 = 'Capital'
 
   return (
     <div className="home">
       <div>
-        <a href={gameLink1}>
+        <Link to="/Gugudan">
           <img src={game_img1} alt="게임 바로가기" className="game_img1" />
-        </a>
-        <a href={gameLink2}>
+        </Link>
+        <Link to="Capital">
           <img src={game_img2} alt="게임 바로가기2" className="game_img2" />
-        </a>
+        </Link>
       </div>
 
       <div className='older'>
