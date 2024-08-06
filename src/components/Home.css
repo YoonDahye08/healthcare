@@ -7,133 +7,50 @@
   margin: 0 auto;
 }
 
-.main {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.main h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.graphename {
-  font-size: 1.5em;
-  margin-top: 20px;
-  color: #666;
-}
-
-.dementia {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.dementia img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-}
-
-.dementia span {
-  font-size: 1em;
-  color: #555;
-  text-align: center;
-  max-width: 800px;
-}
-
-.earlytreatment {
-  margin-bottom: 40px;
-}
-
-.treatment {
-  font-size: 2em;
-  color: #d9534f;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.earlysymptoms {
+.game_img1{
   position: relative;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #f9f9f9;
 }
 
-.earlysymptoms img {
-  height: auto;
+.game_img2{
   position: absolute;
-}
-
-.dementia_img1 {
-  width: 300px;
   right: 100px;
-  top: 550px;
 }
 
-.dementia_img2 {
-  width: 300px;
-  right: 90px;
+.game_img1, .game_img2{
+  width: 600px;
+  border: 1px solid silver;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.earlysymptoms ol {
-  margin-top: 20px;
-  padding-left: 40px;
+.older{
+  margin-top: 150px;
 }
 
-.earlysymptoms li {
-  margin-bottom: 10px;
+.older p:not(.older_2023 p, .older_p p){
+  font-size: 30px;
+  font: bold;
 }
 
-.prevention {
-  text-align: center;
-  margin-top: 40px;
+.older_2023, .older_p{
+  border: 1px solid black;
+  display: inline-block;
+  width: 600px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.prevention333 {
-  font-size: 1.8em;
-  color: #5cb85c;
-  display: block;
-  margin-bottom: 20px;
+.older_2023{
+  position: relative;
+  height: 105px;
 }
 
-.prevention_img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
+.older_p{
+  position: absolute;
+  right: 100px;
+
 }
 
-@media (max-width: 768px) {
-  .earlysymptoms img {
-    width: 100px;
-    top: 10px;
-  }
-
-  .dementia_img1 {
-    right: 90px;
-  }
-
-  .dementia_img2 {
-    right: 10px;
-  }
-
-  .main h1 {
-    font-size: 2em;
-  }
-
-  .graphename {
-    font-size: 1.2em;
-  }
-
-  .treatment {
-    font-size: 1.5em;
-  }
-
-  .prevention333 {
-    font-size: 1.5em;
-  }
+.older_2023 p:first-child, .older_p p:first-child{
+  font-size: 20px;
 }

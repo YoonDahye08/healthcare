@@ -1,46 +1,54 @@
-.Gugudan {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+/* Gugudan.css */
+.gugudan {
   font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  margin: 20px auto;
 }
 
-h1 {
-  color: #333;
-  font-size: 2em;
+.gugudan h1 {
   margin-bottom: 20px;
 }
 
-#problem {
-  font-size: 1.5em;
-  margin: 20px 0;
+.gugudan-problem {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-input[type='number'] {
-  padding: 10px;
-  font-size: 1em;
+.gugudan-answer {
   width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.gugudan-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border: none;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
+.gugudan-button:hover {
   background-color: #45a049;
 }
 
-#feedback {
-  font-size: 1.1em;
+.gugudan-feedback {
   margin-top: 20px;
-  font-weight: bold;
+  font-size: 16px;
+}
+
+.gugudan-score, .gugudan-question-count {
+  margin-top: 10px;
+  font-size: 16px;
 }
