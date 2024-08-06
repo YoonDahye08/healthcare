@@ -1,19 +1,18 @@
-<<<<<<< HEAD
-=======
-/* FullScreenImage.css */
->>>>>>> 249c1861ce11a14890a46f03a02a5ad72ca040f0
 .fullscreen-container {
   position: fixed; /* 뷰포트를 가득 채우기 위해 고정 위치 */
-  top: 0;
   left: 0;
   width: 100vw; /* 전체 뷰포트 너비 */
   height: 100vh; /* 전체 뷰포트 높이 */
   z-index: -1; /* 다른 콘텐츠보다 뒤에 배치 */
 }
 
-.fullscreen-image {
-  width: 100%; /* 이미지 너비를 뷰포트 너비로 설정 */
-  height: 100%; /* 이미지 높이를 뷰포트 높이로 설정 */
+.fullscreen-image1, .fullscreen-image2 {
+  width: 770px; /* 이미지 너비를 뷰포트 너비로 설정 */
+  height: 665px; /* 이미지 높이를 뷰포트 높이로 설정 */
   object-fit: cover; /* 이미지 비율을 유지하며 화면을 채우도록 설정 */
   position: absolute; /* 부모 요소를 기준으로 절대 위치 */
+}
+
+.fullscreen-image2{
+  right: 0;
 }
