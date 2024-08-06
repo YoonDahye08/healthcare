@@ -21,7 +21,7 @@ export default function TeleHealth() {
           src={TeleHealth_img2} // 이미지 URL
           alt="TeleHealth"
           className="fullscreen-image2" // CSS 클래스 추가.
-          onClick={() => window.open('https://console.dialogflow.com/api-client/demo/embedded/359291b7-497e-4037-9d93-1080a5d3b03c', 'window_name', 'width=600, height=700, location=no, status=no, scrollbars=yes')}
+          onClick={() => window.open('http://20.41.72.74:3001/chat', 'window_name', 'width=600, height=700, location=no, status=no, scrollbars=yes')}
         />
     </div>
   );
