@@ -4,6 +4,9 @@ import './Login.css'
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ Email: '', PW: '' })
+  const [showDialog, setShowDialog] = useState(false)
+  const [dialogMessage, setDialogMessage] = useState('')
+  const [dialogCallback, setDialogCallback] = useState(null)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -37,16 +40,12 @@ const Login = () => {
         const text_message = response.data.text_message
 
         if (response.status === 200) {
-          if (login_state == 'login') {
-            var result = confirm(text_message)
-
-            if (result) {
+          if (login_state === 'login') {
+            showConfirmationDialog(text_message, () => {
               window.location.href = '/'
-            }
-            //alert(text_message)
+            })
           } else {
-            var result = confirm(text_message)
-            //alert(text_message)
+            showConfirmationDialog(text_message, null)
           }
 
           // 로그인 상태
@@ -70,6 +69,21 @@ const Login = () => {
     checkSession()
 
     console.log('Login Submitted', credentials)
+  }
+
+  const showConfirmationDialog = (message, callback) => {
+    setDialogMessage(message)
+    setDialogCallback(() => callback)
+    setShowDialog(true)
+  }
+
+  const handleDialogConfirm = () => {
+    setShowDialog(false)
+    if (dialogCallback) dialogCallback()
+  }
+
+  const handleDialogCancel = () => {
+    setShowDialog(false)
   }
 
   return (
@@ -100,6 +114,13 @@ const Login = () => {
           로그인
         </button>
       </form>
+      {showDialog && (
+        <div className="confirmation-dialog">
+          <p>{dialogMessage}</p>
+          <button onClick={handleDialogConfirm}>OK</button>
+          <button onClick={handleDialogCancel}>Cancel</button>
+        </div>
+      )}
     </div>
   )
 }
