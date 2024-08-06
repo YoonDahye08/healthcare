@@ -15,3 +15,12 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+<html lang="en">
+  <head>
+    <link rel="icon" href="public/favicon.ico" />
+    <link rel="apple-touch-icon" href="public/favicon.ico" />
+    <title> Document </title>
+  </head>
+  <body></body>
+</html>;
