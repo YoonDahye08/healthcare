@@ -11,8 +11,8 @@ import game_img2 from '../img/game_img2.png'
 import './Home.css'
 
 export default function Home() {
-  const storage = window.sessionStorage.getItem('userName')
-  //alert(storage)
+  const gameLink1 = 'Gugudan'
+  const gameLink2 = 'Capital'
 
   return (
     <div className="home">
