@@ -383,7 +383,7 @@ function Capital() {
 
   return (
     <div className="container">
-      <h1>수도 맞추기 게임</h1>
+      <h1>수도 맞히기 게임</h1>
       <div className="label-container">
         <label htmlFor="difficulty">난이도 선택:</label>
         <select
